@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="color-scheme" content="only light" />
+<title>Serendipity Play Therapy — Catherine Kingsley</title>
+<meta name="description" content="Serendipity Play Therapy with Catherine Kingsley, a Certified Play Therapist registered with Play Therapy UK. Helping children explore their feelings through the natural language of play." />
+<link rel="icon" href="images/logo.png" />
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    color-scheme:only light;
+    --purple:#7c2fb0;
+    --purple-deep:#5e1f8c;
+    --teal:#2bc4cf;
+    --orange:#ff6a2b;
+    --pink:#ec4a9b;
+    --green:#46c06a;
+    --yellow:#ffc233;
+    --ink:#4a3b57;
+    --cream:#fff9f2;
+    --paper:#ffffff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Nunito',system-ui,sans-serif;
+    color:var(--ink);
+    background:var(--cream);
+    line-height:1.7;
+    font-size:18px;
+  }
+  h1,h2,h3{font-family:'Baloo 2',cursive;line-height:1.15;font-weight:700;}
+  a{color:var(--purple);}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 24px;}
+
+  /* ---- top nav ---- */
+  header.nav{
+    position:sticky;top:0;z-index:20;
+    background:rgba(255,255,255,.92);
+    backdrop-filter:blur(8px);
+    border-bottom:3px solid #f0e3f7;
+  }
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:70px;}
+  .brand{display:flex;align-items:center;gap:12px;font-family:'Baloo 2';font-weight:700;color:var(--purple);font-size:1.15rem;}
+  .brand img{height:46px;width:auto;}
+  nav a{
+    margin-left:22px;text-decoration:none;color:var(--ink);font-weight:700;
+    font-size:.98rem;transition:color .2s;
+  }
+  nav a:hover{color:var(--orange);}
+  .nav-links{display:flex;align-items:center;}
+  @media(max-width:640px){.nav-links{display:none;}}
+
+  /* ---- hero ---- */
+  .hero{
+    text-align:center;
+    padding:60px 24px 70px;
+    background:
+      radial-gradient(circle at 15% 20%, rgba(43,196,207,.18), transparent 40%),
+      radial-gradient(circle at 85% 15%, rgba(236,74,155,.16), transparent 42%),
+      radial-gradient(circle at 50% 100%, rgba(124,47,176,.14), transparent 55%);
+  }
+  .hero img.logo{width:300px;max-width:78%;height:auto;filter:drop-shadow(0 10px 22px rgba(124,47,176,.18));}
+  .hero p.tag{
+    font-family:'Baloo 2';font-size:1.5rem;color:var(--purple);
+    margin-top:6px;
+  }
+  .hero p.sub{max-width:620px;margin:14px auto 0;font-size:1.12rem;}
+  .btn{
+    display:inline-block;margin-top:26px;
+    background:var(--orange);color:#fff;text-decoration:none;
+    font-family:'Baloo 2';font-weight:700;font-size:1.1rem;
+    padding:14px 34px;border-radius:40px;
+    box-shadow:0 8px 0 #d9521c;transition:transform .12s, box-shadow .12s;
+  }
+  .btn:hover{transform:translateY(2px);box-shadow:0 6px 0 #d9521c;}
+
+  /* colour dots strip */
+  .dots{display:flex;justify-content:center;gap:12px;margin-top:34px;}
+  .dots span{width:16px;height:16px;border-radius:50%;display:block;}
+  .dots span:nth-child(1){background:var(--teal);}
+  .dots span:nth-child(2){background:var(--orange);}
+  .dots span:nth-child(3){background:var(--pink);}
+  .dots span:nth-child(4){background:var(--green);}
+  .dots span:nth-child(5){background:var(--yellow);}
+  .dots span:nth-child(6){background:var(--purple);}
+
+  /* ---- sections ---- */
+  section{padding:64px 0;}
+  .section-title{text-align:center;font-size:2rem;color:var(--purple);margin-bottom:8px;}
+  .section-title.alt{color:var(--teal);}
+  .lead{text-align:center;max-width:680px;margin:0 auto 40px;color:#6b5a78;}
+
+  /* about */
+  .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;}
+  @media(max-width:760px){.about-grid{grid-template-columns:1fr;}}
+  .about-card{
+    background:var(--paper);border-radius:24px;padding:34px;
+    box-shadow:0 14px 30px rgba(124,47,176,.10);
+    border:2px solid #f1e6f8;
+  }
+  .about-card p{margin-bottom:14px;}
+  .star-side{text-align:center;}
+  .star-side .big-star{font-size:120px;line-height:1;}
+  .star-side h3{color:var(--orange);font-size:1.6rem;margin-top:10px;}
+
+  /* helps - cards */
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+  @media(max-width:760px){.cards{grid-template-columns:1fr;}}
+  .card{
+    background:var(--paper);border-radius:22px;padding:28px 24px;text-align:center;
+    box-shadow:0 12px 26px rgba(0,0,0,.06);border-top:6px solid var(--teal);
+  }
+  .card:nth-child(2){border-top-color:var(--orange);}
+  .card:nth-child(3){border-top-color:var(--pink);}
+  .card:nth-child(4){border-top-color:var(--green);}
+  .card:nth-child(5){border-top-color:var(--yellow);}
+  .card:nth-child(6){border-top-color:var(--purple);}
+  .card .emoji{font-size:42px;}
+  .card h3{margin:10px 0 6px;font-size:1.25rem;color:var(--ink);}
+  .card p{font-size:.98rem;color:#6b5a78;}
+
+  /* tags / who it helps pills */
+  .pills{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;max-width:760px;margin:0 auto;}
+  .pills span{
+    background:#fff;border-radius:30px;padding:10px 20px;font-weight:700;
+    box-shadow:0 6px 16px rgba(124,47,176,.10);
+  }
+  .pills span:nth-child(6n+1){color:var(--teal);}
+  .pills span:nth-child(6n+2){color:var(--orange);}
+  .pills span:nth-child(6n+3){color:var(--pink);}
+  .pills span:nth-child(6n+4){color:var(--green);}
+  .pills span:nth-child(6n+5){color:var(--purple);}
+  .pills span:nth-child(6n+6){color:#d9a300;}
+
+  /* qualifications band */
+  .band{background:linear-gradient(135deg,var(--purple),var(--purple-deep));color:#fff;}
+  .band .section-title{color:#fff;}
+  .qual{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:34px;}
+  @media(max-width:640px){.qual{grid-template-columns:1fr;}}
+  .qual li{
+    list-style:none;background:rgba(255,255,255,.12);border-radius:16px;
+    padding:18px 22px;display:flex;gap:14px;align-items:flex-start;
+  }
+  .qual li .tick{font-size:1.4rem;line-height:1;}
+
+  /* contact */
+  .contact-card{
+    background:var(--paper);border-radius:28px;max-width:560px;margin:0 auto;
+    padding:40px 34px;text-align:center;
+    box-shadow:0 16px 40px rgba(124,47,176,.14);border:2px solid #f1e6f8;
+  }
+  .contact-card .row{display:flex;align-items:center;justify-content:center;gap:12px;margin:14px 0;font-size:1.15rem;}
+  .contact-card .row .ic{font-size:1.4rem;}
+  .contact-card a{font-weight:700;text-decoration:none;}
+  .contact-card a:hover{text-decoration:underline;}
+
+  /* footer */
+  footer{background:#fff;border-top:3px solid #f0e3f7;padding:46px 0 60px;text-align:center;}
+  .badges{display:flex;gap:30px;justify-content:center;align-items:center;flex-wrap:wrap;margin-bottom:24px;}
+  .badges img{height:70px;width:auto;}
+  footer .small{color:#9384a0;font-size:.9rem;margin-top:6px;}
+  footer .foot-brand{font-family:'Baloo 2';color:var(--purple);font-size:1.2rem;}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top"><img src="images/logo.png" alt="Serendipity Play Therapy logo" /> Serendipity</a>
+    <div class="nav-links">
+      <nav>
+        <a href="#about">About</a>
+        <a href="#play">Play Therapy</a>
+        <a href="#help">Who It Helps</a>
+        <a href="#qualifications">Qualifications</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<a id="top"></a>
+<section class="hero">
+  <div class="wrap">
+    <img class="logo" src="images/logo.png" alt="Serendipity Play Therapy" />
+    <p class="tag">Helping children play, grow &amp; flourish</p>
+    <p class="sub">Play therapy helps children explore their feelings through their natural language of play — a gentle, creative space to make sense of big emotions.</p>
+    <a class="btn" href="#contact">Get in touch</a>
+    <div class="dots"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <h2 class="section-title">Meet Catherine</h2>
+    <p class="lead">A warm, qualified Play Therapist here to support your child.</p>
+    <div class="about-grid">
+      <div class="about-card">
+        <p>Hello! My name is <strong>Catherine Kingsley</strong>, and I am a Certified Play Therapist registered with the organisation <strong>Play Therapy United Kingdom</strong>.</p>
+        <p>I hold an MA in Practice Based Play Therapy from Leeds Beckett University. Previously, I was a Primary School Teacher in Calderdale for twelve years, working with children from across the primary age range.</p>
+        <p>I would love to help your child feel happier, calmer and more confident — please do get in touch to find out more.</p>
+      </div>
+      <div class="star-side">
+        <div class="big-star">⭐</div>
+        <h3>A little bit of magic in every session</h3>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="play" style="background:#fff;">
+  <div class="wrap">
+    <h2 class="section-title alt">What is Play Therapy?</h2>
+    <p class="lead">Play is how children naturally communicate. Play therapy uses that language to help children understand and express what they are feeling — at their own pace, in a safe and trusting space.</p>
+    <div class="cards">
+      <div class="card">
+        <div class="emoji">🧸</div>
+        <h3>Their Natural Language</h3>
+        <p>Children explore their feelings through play, the way that comes most naturally to them.</p>
+      </div>
+      <div class="card">
+        <div class="emoji">💛</div>
+        <h3>A Safe Space</h3>
+        <p>A gentle, accepting environment where every child feels heard and understood.</p>
+      </div>
+      <div class="card">
+        <div class="emoji">🌱</div>
+        <h3>Room to Grow</h3>
+        <p>Building confidence, resilience and emotional wellbeing, one session at a time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="help">
+  <div class="wrap">
+    <h2 class="section-title">Who Can It Help?</h2>
+    <p class="lead">Play therapy can be beneficial to all children, and is especially helpful for those who have experienced:</p>
+    <div class="pills">
+      <span>Trauma</span>
+      <span>Bereavement</span>
+      <span>Family breakdown</span>
+      <span>Anxiety</span>
+      <span>Anger</span>
+      <span>Abuse</span>
+      <span>Social difficulties</span>
+      <span>Emotional difficulties</span>
+    </div>
+  </div>
+</section>
+
+<section id="qualifications" class="band">
+  <div class="wrap">
+    <h2 class="section-title">Qualifications &amp; Training</h2>
+    <ul class="qual">
+      <li><span class="tick">✅</span><span>MA in Practice Based Play Therapy — Leeds Beckett University</span></li>
+      <li><span class="tick">✅</span><span>Certified Play Therapist registered with Play Therapy UK</span></li>
+      <li><span class="tick">✅</span><span>Youth Mental Health First Aid — Mental Health First Aid England</span></li>
+      <li><span class="tick">✅</span><span>Trauma Play foundation course</span></li>
+      <li><span class="tick">✅</span><span>Twelve years as a Primary School Teacher in Calderdale</span></li>
+      <li><span class="tick">✅</span><span>Accredited via the Professional Standards Authority register</span></li>
+    </ul>
+  </div>
+</section>
+
+<section id="contact" style="background:#fff;">
+  <div class="wrap">
+    <h2 class="section-title alt">Get In Touch</h2>
+    <p class="lead">To find out more about the benefits of this effective intervention, or to organise sessions for your child, please contact me.</p>
+    <div class="contact-card">
+      <div class="row"><span class="ic">📞</span><a href="tel:07802348829">07802 348829</a></div>
+      <div class="row"><span class="ic">✉️</span><a href="mailto:serendipityplaytherapy@gmail.com">serendipityplaytherapy@gmail.com</a></div>
+      <div class="row"><span class="ic">📧</span><a href="mailto:catherine.elson@live.co.uk">catherine.elson@live.co.uk</a></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="badges">
+      <img src="images/ptuk.png" alt="Play Therapy United Kingdom registered" />
+      <img src="images/psa.png" alt="Professional Standards Authority accredited register" />
+    </div>
+    <p class="foot-brand">Serendipity Play Therapy</p>
+    <p class="small">Catherine Kingsley · Certified Play Therapist</p>
+    <p class="small">Registered with Play Therapy UK · Accredited Register</p>
+  </div>
+</footer>
+
+</body>
+</html>
