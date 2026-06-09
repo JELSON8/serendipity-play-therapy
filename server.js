@@ -1,6 +1,6 @@
 const http = require('http'), fs = require('fs'), p = require('path');
 const root = __dirname;
-const types = { '.html': 'text/html', '.png': 'image/png', '.ico': 'image/x-icon', '.css': 'text/css', '.js': 'text/javascript' };
+const types = { '.html': 'text/html', '.png': 'image/png', '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.ico': 'image/x-icon', '.css': 'text/css', '.js': 'text/javascript' };
 http.createServer((req, res) => {
   let f = decodeURIComponent(req.url.split('?')[0]);
   if (f === '/') f = '/index.html';
